@@ -4,7 +4,8 @@
 # # 调用函数库
 
 # In[17]:
-
+# sklearn.tree.DecisionTreeClassifier()参数说明
+# https://www.cnblogs.com/hgz-dm/p/10886368.html
 
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.datasets import load_digits
