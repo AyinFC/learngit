@@ -2,15 +2,24 @@ Git教程
 https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440
 
 常用命令：
-把本地master分支的最新修改推送至GitHub：git push origin master
 初始化一个Git仓库：git init
-
+从GitHub克隆一个本地库:git clone <git@github.com:AyinFC/learngit.git>
+把本地master分支的最新修改推送至GitHub：git push origin master
 
 添加文件到Git仓库，分两步：
 
 
-使用命令git add <file>，提交文件至暂存区；
-使用命令git commit -m <message>，从暂存区提交至版本库
+使用命令git add <file> 提交文件至暂存区；
+使用命令git commit -m <'message'> 从暂存区提交至版本库
+
+
+git tag <tagname> 打一个新标签（默认标签是打在最新提交的commit上的）
+git tag  -a <v0.1> -m <"version 0.1 released"> <1094adb> 创建带有说明的标签，用-a指定标签名，-m指定说明文字
+git tag <tagname> <commit_id> 对历史commit打标签
+git tag 查看所有标签
+git show <tagname> 查看标签信息
+
+
 
 
 git status命令可以让我们时刻掌握仓库当前的状态
