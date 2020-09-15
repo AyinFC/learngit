@@ -1,6 +1,8 @@
 Git教程
 https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440
 
+出了解决不了的问题就把库删掉，在本地重新push一遍所有文件（仅限文件数不多的情况）
+
 常用命令：
 初始化一个Git仓库：git init
 从GitHub克隆一个本地库:git clone <git@github.com:AyinFC/learngit.git>
