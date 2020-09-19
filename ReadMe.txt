@@ -14,6 +14,12 @@ https://www.liaoxuefeng.com/wiki/896043488029600/898732864121440
 使用命令git add <file> 提交文件至暂存区；
 使用命令git commit -m <'message'> 从暂存区提交至版本库
 
+git在Commit时提示“Changes not staged”解决办法
+先看下是不是有没有添加的文件。
+git add .
+如果没有未添加文件还是报Changes not staged的话，
+git status
+然后commit
 
 git tag <tagname> 打一个新标签（默认标签是打在最新提交的commit上的）
 git tag  -a <v0.1> -m <"version 0.1 released"> <1094adb> 创建带有说明的标签，用-a指定标签名，-m指定说明文字
