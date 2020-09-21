@@ -1,0 +1,28 @@
+1.在实际工作中，FM和MF哪个应用的更多，为什么
+	FM更多些
+	FM与MF的区别：
+	(1)FM矩阵将User和Item都进行了one-hot编码作为特征，使得特征维度非常巨大且稀疏
+	(2)矩阵分解MF是FM的特例，即特征只有User ID 和Item ID的FM模型
+	(3)矩阵分解MF只适用于评分预测，进行简单的特征计算，无法利用其他特征 
+	(4)FM引入了更多辅助信息（Side information）作为特征
+	(5)FM在计算二阶特征组合系数的时候，使用了MF
+ 	FM可用于二分类问题及回归问题。
+
+
+2.FFM与FM有哪些区别？
+	FM每个特征只有唯一一个隐向量表示，这个隐向量被用来学习与其他任何特征之间的影响，且FM是FFM的特例
+	FFM中每个特征有几个不同的隐向量
+
+
+3.DeepFM相比于FM解决了哪些问题，原理是怎样的
+	FM可以做特征组合，但是计算量大，一般只考虑2阶特征组合，为了既考虑低阶特征又考虑高阶特征，提出了DeepFM。DeepFM=FM+DNN，FM用于提取低阶特征，DNN用于高阶特征提取。
+
+
+4.Surprise工具中的baseline算法原理是怎样的？BaselineOnly和KNNBaseline有什么区别？
+	baseline是基于统计的预测线打分，预测值=统计值+用户对整体的偏差+商品对整体的偏差，用als进行优化。KNNBaseline是在KNNWithMeans的基础上，用baseline代替均值。
+
+5.基于邻域的协同过滤都有哪些算法，请简述原理
+	knns.KNNBasic与knns.KNNWithMeans
+	以相似度选取的领域，落在以当前点为中心，距离为 K 的区域中的所有点都作为邻居。
+
+
